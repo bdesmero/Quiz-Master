@@ -1,0 +1,27 @@
+<% provide(:title, "New Question") %>
+<div class="col-md-offset-3 col-md-6">
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h3 class="panel-title">New Question</h3>
+    </div>
+    <div class="panel-body">
+      <%= form_for(@question) do |f| %>
+        <%= render 'shared/error_messages' %>
+
+        <div class="form-group">
+          <%= f.label :content %>
+          <%= f.text_area :content, class: "form-control" %>
+        </div>
+        <div class="form-group">
+          <%= f.label :answer %>
+          <%= f.text_field :answer, class: "form-control" %>
+        </div>
+
+        <%= f.submit 'Create', class: "btn btn-primary btn-block" %>
+        <div class="text-center">
+          <%= link_to 'Back to Question List', questions_path %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
