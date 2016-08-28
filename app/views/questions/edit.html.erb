@@ -1,0 +1,34 @@
+<% provide(:title, "Edit Question") %>
+<div class="col-md-offset-3 col-md-6">
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h3 class="panel-title">Edit Question</h3>
+    </div>
+    <div class="panel-body">
+      <%= form_for(@question) do |f| %>
+        <%= render 'shared/error_messages' %>
+
+        <div class="form-group">
+          <%= f.label :content %>
+          <%= f.text_area :content, class: "form-control" %>
+        </div>
+        <div class="form-group">
+          <%= f.label :answer %>
+          <%= f.text_field :answer, class: "form-control" %>
+        </div>
+
+        <div class="btn-group btn-group-justified" role="group">
+          <div class="btn-group">
+            <%= f.submit 'Update', class: "btn btn-primary" %>
+          </div>
+          <div class="btn-group">
+            <%= link_to 'Cancel', @question, class: "btn btn-default" %>
+          </div>
+        </div>
+        <div class="text-center">
+          <%= link_to 'Back to Question List', questions_path %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

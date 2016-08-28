@@ -1,0 +1,31 @@
+<% provide(:title, "Question") %>
+<div class="col-md-offset-3 col-md-6">
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h3 class="panel-title">Question</h3>
+    </div>
+    <div class="panel-body">
+      <div class="form-group">
+        <label>Content</label>
+        <p><%= @question.content %></p>
+      </div>
+
+      <div class="form-group">
+        <label>Answer</label>
+        <p><%= @question.answer %></p>
+      </div>
+
+      <div class="btn-group btn-group-justified" role="group">
+        <div class="btn-group">
+          <%= link_to 'Edit', edit_question_path(@question), class: "btn btn-warning" %>
+        </div>
+        <div class="btn-group">
+          <%= link_to 'Delete', @question, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
+        </div>
+      </div>
+      <div class="text-center">
+        <%= link_to 'Back to Question List', questions_path %>
+      </div>
+    </div>
+  </div>
+</div>

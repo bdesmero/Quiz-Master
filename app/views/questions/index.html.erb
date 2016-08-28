@@ -1,0 +1,36 @@
+<% provide(:title, "Question List") %>
+<div class="col-md-offset-3 col-md-6">
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h3 class="panel-title">Question Lists</h3>
+    </div>
+    <div class="panel-body">
+      <ul class="list-group">
+        <% if @questions.present? %>
+          <% @questions.each do |question| %>
+            <li class="list-group-item">
+              <label>Content</label>
+              <p><%= question.content %></p>
+              <label>Answer</label>
+              <p><%= question.answer %></p>
+              <div class="row">
+                <div class="col-md-12 text-right">
+                  <div class="btn-group"><%= link_to '', question_path(question), class: "btn btn-success glyphicon glyphicon-eye-open " %></div>
+                  <div class="btn-group"><%= link_to '', edit_question_path(question), class: "btn btn-warning glyphicon glyphicon-pencil " %></div>
+                  <div class="btn-group"><%= link_to '', question, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger glyphicon glyphicon-remove-circle " %></div>
+                </div>
+              </div>
+            </li>
+          <% end %>
+        <% else %>
+          <li class="list-group-item">
+            <h3 class="text-center text-muted">Questions not found</h3>
+          </li>
+        <% end %>
+      </ul>
+      <div class="form-group">
+        <%= link_to "Add New Question", new_question_path, class: "btn btn-primary btn-block" %>
+      </div>
+    </div>
+  </div>
+</div>
