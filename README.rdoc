@@ -1,15 +1,14 @@
-== Quiz-Master
+= Quiz-Master
 
-This is a Simple App to make Question & Do Some Quiz.
+This is a Simple App to make some Question & do some Quiz.
+This app can convert Word to Number, at Quiz Mode. But it's still imperfect, just can convert only two digit numbers from 0 until 99. This can accept string number("21") and word number("twenty one").
 
-For First
-* Ruby version
+== Getting Started
+ 1. Run this rake to fast initialize database(Optional)
+        $ rake quiz_master:initialize_database
+        
+ 2. Next you can run this command in terminal 
+        $ rails server
 
-* System dependencies
+ 3. Using a browser, go to `http://localhost:3000`,then just try it.
 
-* Configuration
-
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
