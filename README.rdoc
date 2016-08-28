@@ -10,5 +10,5 @@ This app can convert Word to Number, at Quiz Mode. But it's still imperfect, jus
  2. Next you can run this command in terminal 
         $ rails server
 
- 3. Using a browser, go to `http://localhost:3000`,then just try it.
+ 3. Using a browser, go to http://localhost:3000,then just try it.
 
