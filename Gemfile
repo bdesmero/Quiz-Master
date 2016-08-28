@@ -11,8 +11,12 @@ gem 'jquery-rails'
 gem 'sprockets-rails', :require => 'sprockets/railtie'
 
 group :development, :test do
-  gem 'byebug'
   gem 'rspec-rails', require: false
+end
+
+group :test do
+  gem 'pry'
+  gem 'pry-byebug'
 end
 
 group :development do
